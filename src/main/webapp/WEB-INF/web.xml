@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>huayun</display-name>
+	<discription>huayun-srpingMvc</discription>
+	<!-- 读取spring的配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:/beans/application-web.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<!--处理后台乱码问题  -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+	<filter-name>encoding</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+	<servlet-name>huayun</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DisptcherServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+		<!--拦截所有请求 -->
+	<servlet-mapping>
+		<servlet-name>huayun</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	 
+
+</web-app>

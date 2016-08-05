@@ -5,14 +5,22 @@
 	<artifactId>huayun</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>huayun-web</name>
+<<<<<<< HEAD
 
+=======
+	<url>http://maven.apache.org</url>
+	<packaging>war</packaging>  
+>>>>>>> 8dfb80404ca2ad3fc2259be45dec7de05128a372
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 		<maven.test.skip>false</maven.test.skip>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.0.6.RELEASE</spring.version>
 	</properties>
+<<<<<<< HEAD
 	<dependencyManagement>
+=======
+>>>>>>> 8dfb80404ca2ad3fc2259be45dec7de05128a372
 	<dependencies>
 <!-- Spring begin -->
 			<dependency>
@@ -82,9 +90,18 @@
 				<scope>test</scope>
 			</dependency>
 			<!-- Spring end -->
+<<<<<<< HEAD
 			
 	</dependencies>
 </dependencyManagement>	
+=======
+			<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>jstl</artifactId>
+	<version>1.2</version>
+  </dependency>
+	</dependencies>
+>>>>>>> 8dfb80404ca2ad3fc2259be45dec7de05128a372
 	<build>
 		<finalName>msgcenter</finalName>
 		<plugins>

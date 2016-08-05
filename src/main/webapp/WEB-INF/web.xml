@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 	<display-name>huayun</display-name>
+<<<<<<< HEAD
 	<discription>huayun-srpingMvc</discription>
 	<!-- 读取spring的配置文件 -->
 	<context-param>
@@ -12,6 +13,32 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
+=======
+	<description>huayun-srpingMvc</description>
+
+			<!-- 读取spring的配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:beans/application-web.xml</param-value>
+	</context-param>
+	
+			<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+		</listener>
+	
+	<servlet>
+	<servlet-name>huayun</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+		<!--拦截所有请求 -->
+	<servlet-mapping>
+		<servlet-name>huayun</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+>>>>>>> 8dfb80404ca2ad3fc2259be45dec7de05128a372
 	<!--处理后台乱码问题  -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -24,6 +51,7 @@
 	</filter>
 	
 	<filter-mapping>
+<<<<<<< HEAD
 	<filter-name>encoding</filter-name>
 	<url-pattern>/*</url-pattern>
 	</filter-mapping>
@@ -40,6 +68,13 @@
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
+=======
+	<filter-name>encodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>/user/index.jsp</welcome-file>
+>>>>>>> 8dfb80404ca2ad3fc2259be45dec7de05128a372
 	</welcome-file-list>
 	 
 
